@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awseone/5.14.0//css/all.mim.css>">
+    <title>viagem.dhrl</title>
+ 
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="brand">Viagem.DHRL</a>
+        <div class="menu-btn"></div>
+        <div class="navegacao">
+            <div class="navegacao-itens">
+                <a href="#"> Meu lar</a>
+                <a href="#">Sobre</a>
+                <a href="#">Explore</a>
+                <a href="#">Geleiras</a>
+                <a href="#">Contato</a>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="home">
+        <video class="video-slide active" src="#" autoplay muted loop></video>
+        <video class="video-slide" src="..//imagens/5.mp4" autoplay muted loop></video>
+       <video class="video-slide" src="#" autoplay muted loop></video>
+        <video class="video-slide" src="..//imagens/5.mp4" autoplay muted loop></video>
+         <video class="video-slide" src="#" autoplay muted loop></video>
+    
+        <div class="content active">
+            <h1>explore.<br> <span>Mundo</span></h1>
+            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo necessitatibus rem, quasi delectus sequi
+                modi asperiores ab dolorem totam alias labore unde enim quam minus consequatur omnis. Reiciendis, minima
+                in!</P>
+            <a href="#">Informações</a>
+        </div>
+        <div class="content">
+            <h1>viage.<br> <span>Mundo</span></h1>
+            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo necessitatibus rem, quasi delectus sequi
+                modi asperiores ab dolorem totam alias labore unde enim quam minus consequatur omnis. Reiciendis, minima
+                in!</P>
+            <a href="#">Informações</a>
+        </div>
+        <div class="content">
+            <h1>conheça.<br> <span>Mundo</span></h1>
+            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo necessitatibus rem, quasi delectus sequi
+                modi asperiores ab dolorem totam alias labore unde enim quam minus consequatur omnis. Reiciendis, minima
+                in!</P>
+            <a href="#">Informações</a>
+        </div>
+        <div class="content">
+            <h1>descubra.<br> <span>Mundo</span></h1>
+            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo necessitatibus rem, quasi delectus sequi
+                modi asperiores ab dolorem totam alias labore unde enim quam minus consequatur omnis. Reiciendis, minima
+                in!</P>
+            <a href="#">Informações</a>
+        </div>
+        <div class="content">
+            <h1>permita-se.<br> <span>viver</span></h1>
+            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo necessitatibus rem, quasi delectus sequi
+                modi asperiores ab dolorem totam alias labore unde enim quam minus consequatur omnis. Reiciendis, minima
+                in!</P>
+            <a href="#">Informações</a>
+        </div>
+        <div class="midia-icons">
+            <a href="https://www.instagram.com/souuza.001/"><img
+                    src="..//imagens/png-transparent-instagram-logo-baba-ghanoush-falafel-tabbouleh-party-battle-egg-salad-white-instagram-logo-rectangle-tuna-salad-symbol-thumbnail-removebg-preview.png"
+                    class="ico-instagram"></a>
+            <a href="https://wa.me/qr/MQXOF3NKOOU4D1"><img
+                    src="..//imagens/logo-whatsapp-branco-png-icone-whatsapp-png-branco-11562849301ohgxjt9m7x-removebg-preview.png"
+                    class="ico-instagram"></a>
+        </div>
+        <div class="slides-navegacao">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+
+
+        <script type="text/javascript">
+            //javascrip do menu de navegação responsivo
+            const menuBtn = document.querySelector(".menu-btn");
+            const navigation = document.querySelector(".navegacao");
+          
+
+
+            menuBtn.addEventListener("click", () => {
+                menuBtn.classList.toggle("active");
+                navigation.classList.toggle("active");
+            });
+            //slides
+
+            const btns = document.querySelectorAll(".nav-btn");
+            const slides = document.querySelectorAll(".video-slide");
+            const contents = document.querySelectorAll(".content");
+
+            var sliderNav = function(manual){
+                btns.forEach((btn) => {
+                btn.classList.remove("active");
+                });
+
+                slides.forEach((slide) =>{
+                slide.classList.remove("active");
+                });
+                contents.forEach((content) =>{
+                content.classList.remove("active");
+                });
+
+
+
+                btns[manual].classList.add("active");
+                slides[manual].classList.add("active");
+                contents[manual].classList.add("active");
+            }
+            
+            btns.forEach((btn, i) => {
+                btn.addEventListener("click", () => {
+                    sliderNav(i);
+                });
+            });
+
+
+        </script>
+
+</body>
+
+</html>
